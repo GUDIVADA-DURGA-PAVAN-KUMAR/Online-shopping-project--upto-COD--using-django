@@ -1,0 +1,15 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Pay using PayPal{% endblock %}
+
+{% block content %}
+    <h1>Pay using PayPal</h1>
+    {{ form.render }}
+    <h1> Or </h1>
+    <h3> Click on the below button </h3>
+    <form action="cod" method="post">
+    	{% csrf_token %}
+    	<input type="submit" value = "COD (Cash on Delivery)" >
+    	</form>
+    	
+{% endblock %}
